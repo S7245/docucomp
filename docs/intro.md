@@ -2,6 +2,10 @@
 sidebar_position: 1
 ---
 
+`
+npm i acorn@8.10.0
+`
+
 # Tutorial Intro
 
 Let's discover **Docusaurus in less than 5 minutes**.
