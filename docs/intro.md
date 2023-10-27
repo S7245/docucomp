@@ -2,11 +2,22 @@
 sidebar_position: 1
 ---
 
+### Details element example
+
+[codepen_embed height="300" default_tab="html,result" slug_hash="poORXYv" user="S7245"]See the Pen <a href="https://codepen.io/S7245/pen/poORXYv">
+  123</a> by Sam (<a href="https://codepen.io/S7245">@S7245</a>)
+  on <a href="https://codepen.io">CodePen</a>.[/codepen_embed]
+
 `
 npm i acorn@8.10.0
 `
 
 # Tutorial Intro
+
+
+|-1-|-2-|-3-|-4-|
+|--|--|--|--|
+|--|--|--|--|
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
@@ -49,3 +60,5 @@ The `cd` command changes the directory you're working with. In order to work wit
 The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
 
 Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+
+
