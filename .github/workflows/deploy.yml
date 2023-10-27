@@ -1,45 +1,52 @@
-name: Deploy to GitHub Pages
+# .github/workflows/deploy.yml
+
+name: GitHub Pages
 
 on:
-  pull_request:
-    branches: [main]
   push:
-    branches: [main]
-
-permissions:
-  contents: write
+    branches:
+      - main
+    paths:
+      - '.github/workflows/deploy.yml'
+      - 'website/**'
+  pull_request:
 
 jobs:
-  test-deploy:
-    if: github.event_name != 'push'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: pnpm
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-      - name: Test build website
-        run: pnpm build
   deploy:
-    if: github.event_name != 'pull_request'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    defaults:
+      run:
+        working-directory: website
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          node-version: 18
-          cache: pnpm
-      - uses: webfactory/ssh-agent@v0.5.0
+          node-version: '14'
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> "${GITHUB_OUTPUT}"
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
         with:
-          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
-      - name: Deploy to GitHub Pages
-        env:
-          USE_SSH: true
-        run: |
-          git config --global user.email "samlau7245@gmail.com"
-          git config --global user.name "S7245"
-          pnpm install --frozen-lockfile
-          pnpm deploy
+          path: ${{ steps.yarn-cache.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-website-
+
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./website/build
