@@ -66,7 +66,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/favicon.png',
       navbar: {
-        title: 'React Learning',
+        title: 'Software Learning',
         logo: {
           alt: 'My Site Logo',
           src: 'img/favicon.png',
@@ -74,7 +74,7 @@ const config = {
         hideOnScroll: true,
         items: [
           {
-              label: 'React',
+              label: 'Web',
               type: 'dropdown',
               items: [
                   {
@@ -86,6 +86,21 @@ const config = {
                       type: 'docSidebar',
                       label: 'React Next',
                       sidebarId: 'reactNextSidebar',
+                  },
+                  {
+                      type: 'docSidebar',
+                      label: 'Javascript',
+                      sidebarId: 'jsSidebar',
+                  },
+                  {
+                      type: 'docSidebar',
+                      label: 'HTML',
+                      sidebarId: 'htmlSidebar',
+                  },
+                  {
+                      type: 'docSidebar',
+                      label: 'CSS',
+                      sidebarId: 'cssSidebar',
                   },
               ],
           },
