@@ -74,15 +74,26 @@ const config = {
                 hideOnScroll: true,
                 items: [
                     {
+                        label: 'Front',
+                        type: 'dropdown',
+                        items: [
+                            {
+                                label: 'Facebook',
+                                href: 'https://www.facebook.com',
+                            },
+                            {
+                                type: 'docSidebar',
+                                label: 'ReactNative',
+                                sidebarId: 'reactnativeSidebar',
+                            },
+                        ],
+                    },
+                    {
                         label: 'Tutorial',
                         type: 'docSidebar',
                         sidebarId: 'tutorialSidebar',
                     },
-                    {
-                        label: 'ReactNative',
-                        type: 'docSidebar',
-                        sidebarId: 'reactnativeSidebar',
-                    },
+
                 ],
             },
             docs: {
