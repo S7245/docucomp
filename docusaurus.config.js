@@ -78,8 +78,9 @@ const config = {
                         type: 'dropdown',
                         items: [
                             {
-                                label: 'Facebook',
-                                href: 'https://www.facebook.com',
+                                type: 'docSidebar',
+                                label: 'Tutorial',
+                                sidebarId: 'tutorialSidebar',
                             },
                             {
                                 type: 'docSidebar',
@@ -88,12 +89,7 @@ const config = {
                             },
                         ],
                     },
-                    {
-                        label: 'Tutorial',
-                        type: 'docSidebar',
-                        sidebarId: 'tutorialSidebar',
-                    },
-
+                    
                 ],
             },
             docs: {
