@@ -8,140 +8,139 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'React',
-  tagline: 'React Learning',
-  favicon: 'img/favicon.png',
+    title: 'React',
+    tagline: 'React Learning',
+    favicon: 'img/favicon.png',
 
-  // Set the production url of your site here
-  url: 'https://S7245.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docucomp/',
+    // Set the production url of your site here
+    url: 'https://S7245.github.io',
+    // Set the /<baseUrl>/ pathname under which your site is served
+    // For GitHub pages deployment, it is often '/<projectName>/'
+    baseUrl: '/docucomp/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'S7245', // Usually your GitHub org/user name.
-  projectName: 'S7245.github.io', // Usually your repo name.
-  trailingSlash: false,
+    // GitHub pages deployment config.
+    // If you aren't using GitHub pages, you don't need these.
+    organizationName: 'S7245', // Usually your GitHub org/user name.
+    projectName: 'S7245.github.io', // Usually your repo name.
+    trailingSlash: false,
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+    onBrokenLinks: 'throw',
+    onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+    // Even if you don't use internationalization, you can use this field to set
+    // useful metadata like html lang. For example, if your site is Chinese, you
+    // may want to replace "en" with "zh-Hans".
+    i18n: {
+        defaultLocale: 'en',
+        locales: ['en'],
+    },
 
-  presets: [
-    [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/S7245/docucomp/tree/main/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/S7245/docucomp/tree/main/',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
-      }),
-    ],
-  ],
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'img/favicon.png',
-      navbar: {
-        title: 'React Learning',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/favicon.png',
-        },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          { to: '/blog', label: 'Blog', position: 'left' },
-          // {
-          //   href: 'https://github.com/facebook/docusaurus',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
+    presets: [
+        [
+            'classic',
+            /** @type {import('@docusaurus/preset-classic').Options} */
+            ({
+                docs: {
+                    sidebarPath: './sidebars.js',
+                    // Please change this to your repo.
+                    // Remove this to remove the "edit this page" links.
+                    editUrl:
+                        'https://github.com/S7245/docucomp/tree/main/',
+                },
+                blog: {
+                    showReadingTime: true,
+                    // Please change this to your repo.
+                    // Remove this to remove the "edit this page" links.
+                    editUrl:
+                        'https://github.com/S7245/docucomp/tree/main/',
+                },
+                theme: {
+                    customCss: './src/css/custom.css',
+                },
+            }),
         ],
-      },
-      docs: {
-        sidebar: {
-          // 侧边栏可隐藏，这个设置提升小屏幕的体验
-          hideable: true,
-        },
-      },
-      footer: {
-        style: 'dark',
-        /*links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],*/
-        copyright: `Copyright © ${new Date().getFullYear()}`,
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+    ],
+    themeConfig:
+        /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+        ({
+            // Replace with your project's social card
+            image: 'img/favicon.png',
+            navbar: {
+                title: 'React Learning',
+                logo: {
+                    alt: 'My Site Logo',
+                    src: 'img/favicon.png',
+                },
+                hideOnScroll: true,
+                items: [
+                    {
+                        label: 'Tutorial',
+                        type: 'docSidebar',
+                        sidebarId: 'tutorialSidebar',
+                    },
+                    {
+                        label: 'ReactNative',
+                        type: 'docSidebar',
+                        sidebarId: 'reactnativeSidebar',
+                    },
+                ],
+            },
+            docs: {
+                sidebar: {
+                    // 侧边栏可隐藏，这个设置提升小屏幕的体验
+                    hideable: true,
+                },
+            },
+            footer: {
+                style: 'dark',
+                /*links: [
+                  {
+                    title: 'Docs',
+                    items: [
+                      {
+                        label: 'Tutorial',
+                        to: '/docs/intro',
+                      },
+                    ],
+                  },
+                  {
+                    title: 'Community',
+                    items: [
+                      {
+                        label: 'Stack Overflow',
+                        href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                      },
+                      {
+                        label: 'Discord',
+                        href: 'https://discordapp.com/invite/docusaurus',
+                      },
+                      {
+                        label: 'Twitter',
+                        href: 'https://twitter.com/docusaurus',
+                      },
+                    ],
+                  },
+                  {
+                    title: 'More',
+                    items: [
+                      {
+                        label: 'Blog',
+                        to: '/blog',
+                      },
+                      {
+                        label: 'GitHub',
+                        href: 'https://github.com/facebook/docusaurus',
+                      },
+                    ],
+                  },
+                ],*/
+                copyright: `Copyright © ${new Date().getFullYear()}`,
+            },
+            prism: {
+                theme: prismThemes.github,
+                darkTheme: prismThemes.dracula,
+            },
+        }),
 };
 
 export default config;
