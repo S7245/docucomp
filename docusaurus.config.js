@@ -109,6 +109,11 @@ const config = {
             label: 'Tutorial',
             sidebarId: 'tutorialSidebar',
           },
+          {
+            label: 'Blog',
+            to: '/blog',
+            position: 'left',
+          },
           /*{
               label: 'Front',
               type: 'dropdown',
