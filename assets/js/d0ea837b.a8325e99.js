@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocucomp=self.webpackChunkdocucomp||[]).push([[7642],{775:c=>{c.exports=JSON.parse('{"label":"Linux","permalink":"/docucomp/blog/tags/linux","allTagsPath":"/docucomp/blog/tags","count":1,"unlisted":false}')}}]);
