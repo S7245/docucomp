@@ -7,3 +7,4 @@ sidebar_position: 1
 参考资源：
 
 - [W3school](https://www.w3school.com.cn/cssref/pr_border-bottom-style.asp)
+- [w3school](https://www.w3cschool.cn/css/dict)
