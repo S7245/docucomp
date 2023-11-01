@@ -109,12 +109,13 @@
         <category label="greetings" term="greetings"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Long Blog Post]]></title>
+        <title type="html"><![CDATA[技术团队，如何高效开会]]></title>
         <id>https://S7245.github.io/docucomp/blog/long-blog-post</id>
         <link href="https://S7245.github.io/docucomp/blog/long-blog-post"/>
         <updated>2019-05-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is the summary of a very long blog post,]]></summary>
-        <content type="html"><![CDATA[<p>This is the summary of a very long blog post,</p>
+        <summary type="html"><![CDATA[是会议就必须要有目标，会后必须有结论，结论必须被坚决执行。]]></summary>
+        <content type="html"><![CDATA[<p>是会议就必须要有目标，会后必须有结论，结论必须被坚决执行。</p>
+<p>This is the summary of a very long blog post,</p>
 <p>Use a <code>&lt;!--</code> <code>truncate</code> <code>--&gt;</code> comment to limit blog post size in the list view.</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
@@ -136,7 +137,7 @@
             <name>Endilie Yacop Sucipto</name>
             <uri>https://github.com/endiliey</uri>
         </author>
-        <category label="hello" term="hello"/>
-        <category label="docusaurus" term="docusaurus"/>
+        <category label="管理" term="管理"/>
+        <category label="技术" term="技术"/>
     </entry>
 </feed>

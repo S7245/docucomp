@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocucomp=self.webpackChunkdocucomp||[]).push([[4910],{509:c=>{c.exports=JSON.parse('{"label":"\u6280\u672f","permalink":"/docucomp/blog/tags/\u6280\u672f","allTagsPath":"/docucomp/blog/tags","count":1,"unlisted":false}')}}]);
