@@ -1,9 +1,11 @@
 ---
 slug: long-blog-post
-title: Long Blog Post
+title: 技术团队，如何高效开会
 authors: endi
-tags: [hello, docusaurus]
+tags: [管理, 技术, 技术]
 ---
+
+是会议就必须要有目标，会后必须有结论，结论必须被坚决执行。
 
 This is the summary of a very long blog post,
 
