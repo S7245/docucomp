@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocucomp=self.webpackChunkdocucomp||[]).push([[7660],{9078:o=>{o.exports=JSON.parse('{"permalink":"/docucomp/blog/tags/\u6280\u672f","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

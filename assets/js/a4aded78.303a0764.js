@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocsam=self.webpackChunkdocsam||[]).push([[2692],{6238:s=>{s.exports=JSON.parse('{"label":"Nginx","permalink":"/docucomp/blog/tags/nginx","allTagsPath":"/docucomp/blog/tags","count":1,"unlisted":false}')}}]);
