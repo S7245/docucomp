@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocsam=self.webpackChunkdocsam||[]).push([[7993],{5122:o=>{o.exports=JSON.parse('{"title":"Hook","slug":"/category/hook-1","permalink":"/docucomp/docs/category/hook-1","navigation":{"previous":{"title":"React","permalink":"/docucomp/docs/react/intro"},"next":{"title":"useState","permalink":"/docucomp/docs/react/hook/useState"}}}')}}]);

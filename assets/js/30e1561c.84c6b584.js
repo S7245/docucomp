@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocsam=self.webpackChunkdocsam||[]).push([[3283],{8120:s=>{s.exports=JSON.parse('{"label":"Git","permalink":"/docucomp/blog/tags/git","allTagsPath":"/docucomp/blog/tags","count":1,"unlisted":false}')}}]);

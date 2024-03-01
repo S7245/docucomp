@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocsam=self.webpackChunkdocsam||[]).push([[2955],{166:o=>{o.exports=JSON.parse('{"permalink":"/docucomp/blog/page/2","page":2,"postsPerPage":10,"totalPages":2,"totalCount":14,"previousPage":"/docucomp/blog","blogDescription":"Blog","blogTitle":"\u535a\u5ba2"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocsam=self.webpackChunkdocsam||[]).push([[7868],{8624:s=>{s.exports=JSON.parse('{"label":"spark","permalink":"/docucomp/blog/tags/spark","allTagsPath":"/docucomp/blog/tags","count":4,"unlisted":false}')}}]);
