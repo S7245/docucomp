@@ -346,7 +346,91 @@ npm -v
 
 ## 基础命令
 
+### 系统命令
+
 ```sh
 > cat /etc/redhat-release
 CentOS Linux release 7.9.2009 (Core)
+
+> uname -m
+x86_64
+
+> uname -r
 ```
+
+
+```
+centos idealTree:lib: sill idealTree buildDeps
+```
+
+CentOS7 中执行 `npm install -g pm2` 卡死不动：
+
+```sh
+# 查看镜像是否安装，
+> npm config get registry
+
+> npm cache clean --force
+
+> npm config set registry https://registry.npmmirror.com
+
+> 
+```
+
+
+## CentOS 安装功能
+
+### 把nodejs部署到centos
+
+```sh
+> sudo yum install nodejs
+> sudo yum install npm -y
+> npm -v
+> node -v
+
+# 安装 pm2 
+> npm cache clean --force
+> npm config set registry https://registry.npmmirror.com
+> npm config get registry
+> npm install -g pm2
+
+# 新建 college nodejs 项目目录
+# 把项目同步到项目目录中
+> cd /usr/local/src/app-nodejs/college
+> pm2 start app.js --name "/usr/local/src/app-nodejs/college"
+
+# 开放端口
+> service firewalld stop
+> firewall-cmd --zone=public --list-ports
+> firewall-cmd --add-port=3001/tcp --permanent
+> firewall-cmd --zone=public --list-ports
+> service firewalld restart
+
+# 如果是阿里云服务，需要到在 安全组 中开放端口。
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
