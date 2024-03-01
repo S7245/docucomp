@@ -1,0 +1,9 @@
+{
+  "label": "第三方库",
+  "position": 2,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "description": "5 minutes to learn the most important Docusaurus concepts.",
+  }
+}

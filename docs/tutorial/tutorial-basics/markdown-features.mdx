@@ -4,6 +4,25 @@ sidebar_position: 4
 
 # Markdown Features
 
+export const TableDemo = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '20px',
+      color: '#fff',
+      padding: '10px',
+      cursor: 'pointer',
+    }}
+    onClick={() => {
+      alert(`You clicked the color ${color} with label ${children}`);
+    }}>
+    {children}
+  </span>
+);
+
+<TableDemo color="#25c2a0">ss</TableDemo>
+
+
 <Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">Facebook blue</Highlight> are my favorite colors.
 
 I can write **Markdown** alongside my _JSX_!
@@ -211,3 +230,8 @@ export const CodePen11 = () => (
 <CodePen11/>
 
 border-radius: '4px',overflow: 'hidden'
+
+
+
+
+

@@ -1,20 +1,235 @@
 ---
 slug: mdx-blog-post
-title: MDX Blog Post
+title: Linux
 authors: [slorber]
 tags: [docusaurus]
 ---
 
-Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).
+- [Linux安装nginx](https://www.cnblogs.com/java-six/p/17351201.html)
+- [centos7 安装 nginx](https://cloud.tencent.com/developer/article/2084551)
 
-:::tip
-
-Use the power of React to create interactive blog posts. This is a test input.
-
-```js
-<button onClick={() => alert('button clicked!')}>Click me!</button>
+```sh
+# 为了以后方便也可以这样
+sudo ln -s /usr/local/nginx/sbin/nginx /usr/bin/nginx
+# 然后就可以直接
+sudo nginx
 ```
 
-<button onClick={() => alert('button clicked!')}>Click me!</button>
+拷贝：
 
-:::
+
+```sh
+# 拷贝文件夹
+cp -r dir1 dir2
+
+
+# 拷贝文件
+cp dir1 dir2
+```
+
+
+Linux文件结构：
+
+- `/bin` bin是Binary的缩写。这个目录存放着最经常使用的命令。 
+- `/boot` 这里存放的是启动Linux时使用的一些核心文件，包括一些链接文件以及镜像文件。 
+- `/dev` dev是Device(设备)的缩写。该目录下存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的。 
+- `/etc`这个目录用来存放所有的系统管理所需要的配置文件和子目录。 
+- `/home`用户的主目录，在Linux中，每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的。 
+- `/lib`这个目录里存放着系统最基本的动态链接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要用到这些共享库。 
+- `/lost+found`这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件。 
+- `/mnt`在这里面中有四个目录，系统提供这些目录是为了让用户临时挂载别的文件系统的，我们可以将光驱挂载在/mnt/cdrom上，然后进入该目录就可以查看光驱里的内容了。 
+- `/proc`这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。这个目录的内容不在硬盘上而是在内存里，我们也可以直接修改里面的某些文件，比如可以通过下面的命令来屏蔽主机的ping命令，使别人无法ping你的机器： 
+- `/root`该目录为系统管理员，也称作超级权限者的用户主目录。 
+- `/sbin` s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序。 
+- `/tmp` 这个目录是用来存放一些临时文件的。 
+
+我们要用到的很多应用程序和文件几乎都存放在usr目录下。具体来说： 
+
+- `/usr/X11R6`存放X-Windows的目录； 
+- `/usr/games`存放着XteamLinux自带的小游戏； 
+- `/usr/bin`存放着许多应用程序； 
+- `/usr/sbin`存放root超级用户使用的管理程序； 
+- `/usr/doc` Linux技术文档； 
+- `/usr/include`用来存放Linux下开发和编译应用程序所需要的头文件； 
+- `/usr/lib`存放一些常用的动态链接共享库和静态档案库； 
+- `/usr/local`这是提供给一般用户的/usr目录，在这里安装一般的应用软件； 
+- `/usr/man`帮助文档所在的目录； 
+- `/usr/src` Linux开放的源代码，就存在这个目录，爱好者们别放过哦； 
+- `/var` 这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件。如果你想做一个网站，你也会用到/var/www这个目录。 
+
+
+## 数据库
+
+- [MacBook 安装MySQL以及Navicat](https://blog.csdn.net/YangZzzzzzzzzzz/article/details/108568266)
+- [批量修改MySQL数据库所有表中某些字段的类型/注释/默认值](https://zhuanlan.zhihu.com/p/660683164?utm_id=0)
+
+
+## Nginx服务器
+
+- 如何查看Nginx服务器的状态 : `sudo systemctl status nginx`。
+- 启动Nginx: `sudo systemctl start nginx`
+- 要停止Nginx: `sudo systemctl stop nginx`
+
+
+
+```
+具有sudo 或 root 特权的用户帐户
+
+与远程系统的现有SSH连接(如果您正在远程工作)
+
+一、使用systemctl启动，停止和重新启动Nginx
+
+1、如何查看Nginx服务器的状态
+
+Nginx作为服务在您的服务器上运行。这意味着它应该在后台主动运行，即使您在屏幕上看不到任何东西。您可以通过在终端窗口中输入以下命令来显示Nginx服务的状态：
+
+sudo systemctl status nginx
+
+系统将切换到状态模式，显示有关Nginx服务的大量信息。推荐阅读：《cPanel如何安装Nginx》
+
+如果服务正在运行(活动)，则第三行将显示绿色的活动(运行)状态。
+
+如果Nginx没有运行，它将 以标准白色显示为非活动状态。
+
+如果出了问题，Nginx的无法加载，你会看到一个红色的状态失败，与故障有关的一些信息。
+
+按下q以重新激活bash提示。
+
+SystemD是现代Linux发行版(Ubuntu 20.04 / 18.04 / 16.04，CentOS 7/7和Debian 9/10 )上的默认服务管理器。SystemD管理器通过systemctl命令运行。
+
+该systemctl命令是基本的Linux命令。这意味着它可以用于任何Linux服务。
+
+2、停止并启动Nginx
+
+systemctl 可用于启动和停止Nginx服务。
+
+要停止Nginx，请运行以下命令：
+
+sudo systemctl stop nginx
+
+要启动Nginx，请systemctl使用以下start选项执行命令：
+
+sudo systemctl start nginx
+
+2、如何重启Nginx
+
+1)、Nginx重启
+
+如果要在更改配置后刷新Nginx，最好最好重新加载服务。这将关闭旧进程，并使用新配置重新启动新进程。
+
+使用systemctlLinux命令重新加载Nginx服务。运行以下命令：
+
+sudo systemctl reload nginx
+
+注意：如果Nginx服务未激活，则无法重新加载Nginx。
+
+2)、Nginx强制重启
+
+对于主要配置更改，您可以强制完全重启Nginx。这将强制关闭整个服务和子流程，然后重新启动整个程序包。推荐阅读：《Linux独立服务器有哪些优势？》
+
+输入以下命令：
+
+sudo systemctl restart nginx
+
+3)、重新启动vs重新加载Nginx
+
+该reload命令在重新加载更新的配置文件时使Nginx服务器保持运行状态。如果Nginx在任何配置文件中发现语法错误，则重新加载将中止，并且服务器将基于旧的配置文件继续运行。重新加载比重新启动Nginx更安全。
+
+该restart命令将关闭服务器(包括所有相关服务)并重新打开电源。仅在进行重大配置更新(例如更改端口或接口)时，才重新启动Nginx。此命令将强制关闭所有工作进程。
+
+二、使用Nginx命令启动，停止和重新加载Nginx
+
+Nginx有一组内置工具来管理可以使用Nginx命令访问的服务。
+
+1、Nginx开始
+
+要启动Nginx和相关进程，请输入以下内容：
+
+sudo /etc/init.d/nginx start
+
+如果运行成功，终端输出将显示以下内容：
+
+Output
+
+[ ok ] Starting nginx (via systemctl): nginx.service.
+
+2、Nginx重启
+
+强制关闭并重新启动Nginx和相关进程：
+
+sudo /etc/init.d/nginx restart
+
+或者，使用以下nginx -s命令：
+
+sudo nginx -s restart
+
+3、Nginx停止
+
+要禁用或停止Nginx服务，请输入以下内容：
+
+sudo /etc/init.d/nginx stop
+
+或者，使用：
+
+sudo nginx -s stop
+
+4、Nginx重新加载
+
+要正常停止并重新启动Nginx和相关进程，请使用以下命令：
+
+sudo /etc/init.d/nginx reload
+
+或者，您可以使用nginx -s命令将指令直接传递给Nginx：
+
+sudo nginx -s reload
+
+5、Nginx退出
+
+通过使用quit指令与nginx -s命令来强制关闭Nginx服务：
+
+sudo nginx -s quit
+```
+
+查看进程：
+
+ps -ef | grep nginx
+
+
+```sh
+# 查询80端口的占用情况。
+netstat -an | grep :8363
+
+# 到nginx安装目录sbin下
+./nginx -t
+
+# 或者查看nginx服务端口
+ss -nutlp | grep -i nginx
+
+/sbin/iptables -I input -p tcp --dport 8000 -j ACCEPT
+
+
+# 添加80端口 : https://www.kancloud.cn/luke8327/phpwolf/3035475
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+# 更新防火墙规则
+firewall-cmd --reload
+```
+
+firewall-cmd --zone=public --add-port=8000/tcp --permanent
+
+> nginx 在阿里云中配置的坑：在centOS7中 firewall 添加开放接口外，在阿里云安全组中也要把端口给开放出来。
+
+
+```
+解决 `http://47.106.165.39:8001/stadium/classroom`在刷新是报错404的问题，在location添加 try_files 项。
+location / {
+	try_files $uri $uri/ /index.html;
+}
+```
+
+
+```sh
+cat /etc/redhat-release
+
+# CentOS Linux release 7.9.2009 (Core)
+# 当前linux版本为centos 7.9
+```

@@ -1,0 +1,9 @@
+{
+  "label": "组件库",
+  "position": 2,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "description": "记录使用组件的记录.",
+  }
+}

@@ -1,0 +1,66 @@
+# DVA
+
+![](https://gw.alipayobjects.com/zos/skylark/48f9ff5f-ab11-4896-9fb6-65cdd83340de/2018/png/dcb7073b-fc0c-4e2c-aa39-93ac249d715c.png)
+
+数据统一在 `src/models` 中的 `model` 管理，组件内尽可能的不去维护数据，而是通过 `connect` 去关联 `model` 中的数据。\
+Umi 会默认将 `src/models` 下的 `model` 定义自动挂载，对于某个 page 文件夹下面的 model 我们也会默认挂载。\
+`model` 的 `namespace` 是全局的，你仍然需要保证你的 `namesapce` 唯一（默认是文件名）。
+
+## 使用
+
+### 把组件和Model connect在一起
+
+### 在组件中 dispatch 事件
+
+> 在用户触发某个事件的时候调用它来触发 model 中的 effects 或者 reducer 来修改 model 中的数据。
+
+## API
+
+### connect
+
+> 来将 model 和组件关联在一起的，它会将相关数据和 dispatch 添加到组件的 props 中。
+
+### dispatch
+
+> 在使用 connect 将组件和 model 关联在一起的同时框架也会添加一个 `this.props.dispatch` 的方法，通过该方法你可以触发一个 action 到 model 中。
+
+### Reducer
+
+> `reducer` 是一个函数，用来**处理修改数据的逻辑（同步，不能请求后端）**。\
+> 接受 `state` 和 `action` ，返回老的或新的 `state` 。即：`(state, action) => state`。
+
+![](https://sparkclick-1256587996.cos.ap-chengdu.myqcloud.com/Test/WX20240205-02051407.png)
+
+### Effect
+
+> `effects` 是定义在 `model` 中的。它也是一种类型的 `action`，主要**用于和后端的异步通讯**。\
+> 通过 `effects` 请求后端发送和接收必要的数据之后可以通过 `put` 方法再次发送一个 `reducer` 来修改数据。\
+> `effects` 中定义的 `action` 都必须是通过 `*` 定义的 `Generator` 函数，然后在函数中通过关键字 `yield` 来触发异步逻辑。
+
+#### put
+
+```ts
+yield put({ type: 'todos/add', payload: 'Learn Dva' });
+```
+
+> `yield`: 屈服，让步；放弃，让出；给（大路上的车辆）让路。
+
+#### call
+
+> 用于调用异步逻辑，支持 `promise` 。
+
+#### select
+
+> 用于从 `state` 里获取数据。
+
+```ts
+const todos = yield select(state => state.todos);
+```
+
+### loading
+
+## state
+
+### 有数据类型的 state
+
+- [gits](https://gist.github.com/S7245/e7be0272c7dad5cfd1d03b45e19c20be)

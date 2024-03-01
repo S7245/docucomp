@@ -1,0 +1,8 @@
+{
+  "label": "Mysql",
+  "position": 2,
+  "className": "red",
+  "link": {
+    "type": "generated-index"
+  }
+}

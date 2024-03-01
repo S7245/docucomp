@@ -6,6 +6,12 @@ sidebar_position: 1
 
 # Tutorial Intro
 
+- [x] 编辑列表接口请求错误（ add -> edit）。
+- [ ] 编辑列表接口请求错误（ add -> edit）。
+
+|id | tenant_id | package_template_id | package_name  | package_introduce | charge_type | original_price  | sell_price  | effective_date  | effective_date_unit | venue_num | open_display_flag | package_status  | del_flag  | create_dept | create_by | create_time | update_by | update_time|
+|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+
 [Docusaurus官网](https://docusaurus.io/)
 
 -[React.js Example](https://reactjsexample.com/)
@@ -55,3 +61,12 @@ The `cd` command changes the directory you're working with. In order to work wit
 The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
 
 Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```

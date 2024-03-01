@@ -1,0 +1,9 @@
+{
+  "label": "插件库",
+  "position": 2,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "description": "记录使用插件的记录.",
+  }
+}
