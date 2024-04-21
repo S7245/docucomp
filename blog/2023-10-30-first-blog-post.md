@@ -346,16 +346,66 @@ npm -v
 
 ## 基础命令
 
+### uname
+
+> `uname` 命令用于显示操作系统信息，例如内核版本、主机名、处理器类型等
+
+```
+--help 　显示帮助。
+ 
+uname -a 或--all                 显示全部信息，包括内核名、主机名、内核版本、处理器类型和硬件架构等。
+uname -s 或--sysname             显示内核名。
+uname -n 或--nodename            显示主机名（网络节点上）。
+uname -r 或--kernel-release      显示内核发行版。
+uname -v 或--kernel-version      显示内核版本。
+uname -m 或--machine             显示计算机硬件架构。
+uname -p 或--processor           显示主机处理器类型
+uname -i 或--hardware-platform   显示硬件平台
+uname -o 或--operating-system    显示操作系统名称
+```
+
+```sh
+> uname -a
+Darwin liushandeMBP.lan 21.6.0 Darwin Kernel Version 21.6.0: Sun Dec 17 22:55:27 PST 2023; root:xnu-8020.240.18.706.2~1/RELEASE_X86_64 x86_64
+
+> uname -s
+Darwin
+
+> uname -n
+liushandeMBP.lan
+
+> uname -r
+21.6.0
+
+> uname -v
+Darwin Kernel Version 21.6.0: Sun Dec 17 22:55:27 PST 2023; root:xnu-8020.240.18.706.2~1/RELEASE_X86_64
+
+> uname -m
+x86_64
+
+> uname -p
+i386
+```
+
 ### 系统命令
 
 ```sh
 > cat /etc/redhat-release
 CentOS Linux release 7.9.2009 (Core)
 
+> uname -a
+Darwin liushandeMBP.lan 21.6.0 Darwin Kernel Version 21.6.0: Sun Dec 17 22:55:27 PST 2023; root:xnu-8020.240.18.706.2~1/RELEASE_X86_64 x86_64
 > uname -m
 x86_64
 
 > uname -r
+
+# 查看端口占用情况
+> sudo lsof -n -P | grep :3001
+node 28525 liushan 21u IPv6  0x8973db212a02bb3 0t0 TCP *:3001 (LISTEN)
+
+# 终止进程
+> kill -9 28525
 ```
 
 

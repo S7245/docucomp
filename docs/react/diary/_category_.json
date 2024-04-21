@@ -1,0 +1,8 @@
+{
+  "label": "学习笔记",
+  "position": 2,
+  "className": "red",
+  "link": {
+    "type": "generated-index"
+  }
+}

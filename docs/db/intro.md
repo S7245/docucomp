@@ -15,7 +15,7 @@ CREATE TABLE `SIMS_COLLEGE` (
 SET FOREIGN_KEY_CHECKS = 1;
 ```
 
-
 ```shell
 mkdir college && cd college && pnpm init
 ```
+

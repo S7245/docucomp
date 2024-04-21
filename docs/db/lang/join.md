@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Join
 
 ![](https://blogs7245-1256587996.cos.ap-guangzhou.myqcloud.com/img/ktj0aux284.jpeg)
@@ -33,3 +37,9 @@ CREATE TABLE `students` (
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='学员信息';
 ```
+
+## 关于JOIN的替代
+
+1. 通过内存进行拼接。
+2. 先查出一张表的数据，然后另一张表通过`IN`的方式进行条件限制查询，使用`IN`代替关联查询。
+3. 使用ES构建宽表，通过ES数据清洗后，直接进行查询。

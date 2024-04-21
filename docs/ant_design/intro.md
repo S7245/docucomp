@@ -9,6 +9,23 @@ sidebar_position: 1
 - [UMI](https://umijs.org/)
 - [bilibili-UMI/MAX](https://www.bilibili.com/video/BV1EM411a7PU/?spm_id_from=333.337.search-card.all.click)
 
+## Grid
+
+`span` `pull` `push` `offset` `order` 属性可以通过内嵌到 `xs` `sm` `md` `lg` `xl` `xxl` 属性中来使用。其中 xs={6} 相当于 xs={{ span: 6 }}。
+
+
+```ts
+// auto 使用组件默认的宽度
+// xs=104px 适用于短数字、短文本或选项。
+// sm=216px 适用于较短字段录入、如姓名、电话、ID 等。
+// md=328px 标准宽度，适用于大部分字段长度。
+// lg=440px 适用于较长字段录入，如长网址、标签组、文件路径等。
+// xl=552px 适用于长文本录入，如长链接、描述、备注等，通常搭配自适应多行输入框或定高文本域使用。
+```
+
+### Col
+
+- `span` 栅格占位格数
 
 ## ProLayout - 高级布局
 

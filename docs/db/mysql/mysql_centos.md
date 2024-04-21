@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # CentOS中的Mysql
 
 ## Q&A
@@ -35,4 +39,9 @@ flush privileges;
 
 ```sh
 systemctl restart mysqld
+
+# 使用systemctl命令来配置MySQL服务的自启动：
+sudo systemctl enable mysqld
+# 启动MySQL服务：
+sudo systemctl start mysqld
 ```
