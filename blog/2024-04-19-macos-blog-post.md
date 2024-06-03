@@ -7,11 +7,18 @@ tags: [Mac]
 
 # Mac使用
 
+## Excel应用
+
+|功能点|快捷键|
+|--|--|
+| 新建行| CMD + Shift + `+` |
+
+
+## 自动化脚本任务
+
 [Daemons and Services Programming Guide](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html) \
 [launchd.plist man 页面](x-man-page://launchd.plist) \
 [Mac 上“终端”中的 shell 脚本介绍](https://support.apple.com/zh-cn/guide/terminal/apd53500956-7c5b-496b-a362-2845f2aab4bc/2.14/mac/14.0)
-
-## 自动化脚本任务
 
 ### plist文件
 

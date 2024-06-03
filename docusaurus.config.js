@@ -191,6 +191,17 @@ const config = {
             ],
           },
           {
+            label:"Flutter",
+            type:"dropdown",
+            items: [
+              {
+                type: "docSidebar",
+                label: "Flutter",
+                sidebarId: "flutter_designSidebar",
+              }
+            ],
+          },
+          {
             label: "运维",
             type: "dropdown",
             items: [

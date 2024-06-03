@@ -13,6 +13,27 @@ npm set init-license "MIT"
 ```
 
 
+## npm 私有仓库
+
+```sh
+# 查看npm镜像源地址，官方源(https://registry.npmmirror.com/)
+npm config get registry
+
+# 设置npm默认源
+npm config set registry https://registry.npmmirror.com
+npm config set registry=https://packages.aliyun.com/65dd84ebbf04fd10e8168bd8/npm/npm-registry/
+```
+
+本地开发(依赖本地的包)：
+
+```sh
+# --only=dev 是开发依赖
+npm install /Users/liushan/Desktop/private_packages/npms/zkw_utils --only=dev
+
+# "file:../npms/zkw_utils"
+```
+
+
 talk
 
 - 一周的时间，弄会员管理； 有没有自发性去做优化？ 

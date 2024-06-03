@@ -15,3 +15,9 @@ sidebar_position: 1
 [React教程-哔哩哔哩](https://space.bilibili.com/4173948/search/video?keyword=2023%20%E5%B9%B4%E7%BB%88%E6%9E%81%20React%20%E8%AF%BE%E7%A8%8B)
 
 [Udemy付费课程】Node.js-哔哩哔哩](https://www.bilibili.com/video/BV1FY4y1H7ka/?vd_source=26eb071f00273674e08568b1e1119902)
+
+## 推荐的库
+
+### 日历日程相关
+
+- [Desktop daily schedule](https://demo.mobiscroll.com/react/scheduler/desktop-day-view#)

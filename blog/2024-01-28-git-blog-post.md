@@ -172,7 +172,51 @@ hint: invocation.
 ```
 
 
+git本地关联远程仓库:
 
+```sh
+git init
+git add .
+git commit -m "first commit"
+git branch -M master
+git remote add origin git@github.com:xxx/aaa_utils.git
+# 解决： fatal: Not possible to fast-forward, aborting.
+git pull origin master --rebase
+git push -u origin master
+
+# 在终端中切换到项目目录下，运行登陆命令，之后按照终端提示输入用户名、密码等信息即可
+
+# 登陆
+npm login
+# 控制台会提示输入相关信息
+# Log in on https://registry.npmjs.org/
+# Username:  // 用户名
+# Password: // 密码
+# Email: (this IS public) // 邮箱
+# Enter one-time password: // 如果之前做过 双因素身份验证 (2FA)，需要生成一次性密钥
+# Logged in as xxx on https://registry.npmjs.org/.
+
+# 发布命令
+npm publish
+# 到[官网](https://www.npmjs.com/package/aaa_utils)看仓库发布情况
+
+# 在项目中安装依赖包
+npm install aaa_utils
+
+```
+
+
+```sh
+# git pull
+# You are not currently on a branch.
+# Please specify which branch you want to merge with.
+# See git-pull(1) for details.
+# 
+#     git pull <remote> <branch>
+
+git pull origin master
+```
+## 
 
 
 
