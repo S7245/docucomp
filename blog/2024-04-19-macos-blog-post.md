@@ -198,6 +198,9 @@ https://developer.apple.com/library/archive/technotes/tn2083/_index.html
 ## 一次成功的部署
 
 ```sh
+sudo launchctl enable system/com.spark.deploy.merchant
+sudo launchctl bootstrap system /Library/LaunchDaemons/com.spark.deploy.merchant.plist
+sudo launchctl start system/com.spark.deploy.merchant
 
 sudo launchctl enable system/com.spark.deploy.merchant
 sudo launchctl bootstrap system /Library/LaunchDaemons/com.spark.deploy.merchant.plist
@@ -214,6 +217,6 @@ sudo launchctl bootstrap gui/$UID /Library/LaunchAgents/com.spark.deploy.merchan
 sudo launchctl start gui/$UID/com.spark.deploy.merchant
 
 sudo launchctl stop gui/$UID/com.spark.deploy.merchant
-sudo launchctl disable gui/$UID/com.spark.deploy.merchant
+sudo launchctl disable gui/$UID com.spark.deploy.merchant
 sudo launchctl bootout gui/$UID /Library/LaunchAgents/com.spark.deploy.merchant.plist
 ```
