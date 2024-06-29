@@ -1,0 +1,8 @@
+{
+  "label": "示例",
+  "position": 2,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+  }
+}

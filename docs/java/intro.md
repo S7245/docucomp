@@ -48,7 +48,11 @@ spring.jackson.default-property-inclusion=non_null
 - 版本号(version)：2.0.0
 
 
+## 业务解耦
 
+- 依赖注入
+- AOP
+- 事件驱动 Event
 
 
 

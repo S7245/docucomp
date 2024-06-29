@@ -1,0 +1,24 @@
+/* src/components/ImageGrid.module.css */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.gridItem {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  height: 200px; /* 固定高度，可以根据需要调整 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gridItem img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+

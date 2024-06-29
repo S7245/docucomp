@@ -188,6 +188,11 @@ const config = {
                 label: "coding",
                 sidebarId: "pm_coding_designSidebar",
               },
+              {
+                type: "docSidebar",
+                label: "MasterGo",
+                sidebarId: "mastergo_designSidebar",
+              },
             ],
           },
           {

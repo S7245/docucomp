@@ -19,3 +19,6 @@ SET FOREIGN_KEY_CHECKS = 1;
 mkdir college && cd college && pnpm init
 ```
 
+
+
+## 数据库备份

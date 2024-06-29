@@ -216,7 +216,20 @@ npm install aaa_utils
 
 git pull origin master
 ```
-## 
+## RSA相关
+
+```sh
+# 通过RSA的形式执行`git push`，报错：`git@github.com: Permission denied (publickey).`
+# 生产密钥后，并且已经把密钥绑定到`https://github.com/settings/keys`的 SSH中，但问题是还未生效，
+# 在本地端要确保 添加SSH密钥到SSH代理，确保SSH代理正在运行，并将生成的SSH密钥添加到代理中
+# highlight-next-line
+ssh-add ~/.ssh/id_rsa
+
+# 查看是否执行成功
+# highlight-next-line
+ssh -T git@github.com
+# Hi S7245! You've successfully authenticated, but GitHub does not provide shell access.
+```
 
 
 
