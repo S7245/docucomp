@@ -62,3 +62,13 @@ graph TD;
     B-->D;
     C-->D;
 ```
+
+
+```mermaid
+mindmap
+    Root
+        A
+        ::icon(fa fa-book)
+        B(B)
+        ::icon(mdi mdi-skull-outline)
+```
