@@ -1,4 +1,10 @@
+---
+sidebar_position: 1
+---
+
 # CODING
+
+![](https://blogs7245-1256587996.cos.ap-guangzhou.myqcloud.com/img/mastergo/20240707001.png)
 
 nginx位置 /www/wwwroot
 java日志
